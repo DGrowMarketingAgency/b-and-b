@@ -9,7 +9,7 @@ import Conexaconnection from "./pages/Conexaconnection";
 import Uniqueimplant from "./pages/Uniqueimplant";
 import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
