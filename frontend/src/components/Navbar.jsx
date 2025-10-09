@@ -22,10 +22,10 @@ const Navbar = () => {
                 <Link to="/">HOME</Link>
               </li>
               <li>
-                <Link to="/subperiosteal">CONEXA CONNECTION</Link>
+                <Link to="/conexaconnection">CONEXA CONNECTION</Link>
               </li>
               <li>
-                <Link to="/surgicalkit">6 UNIQUE IMPLANT</Link>
+                <Link to="/uniqueimplant">6 UNIQUE IMPLANT</Link>
               </li>
               <li>
                 <Link to="/surgicalkit">B&B SURGICAL KITS</Link>
