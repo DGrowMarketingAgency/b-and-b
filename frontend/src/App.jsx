@@ -9,6 +9,7 @@ import Conexaconnection from "./pages/Conexaconnection";
 import Uniqueimplant from "./pages/Uniqueimplant";
 import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
+      <Footer />
     </Fragment>
   );
 }

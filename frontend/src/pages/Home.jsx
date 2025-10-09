@@ -2,7 +2,8 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../assets/home-bg.jpg";
 import UniqueProduct from "../components/UniqueProduct";
-import ScrollCards from "./StackingCards";
+import ScrollCards from "../components/ScrollCards";
+import Category from "../components/Category";
 
 const Home = () => {
   return (
@@ -26,6 +27,8 @@ const Home = () => {
             sterilization with gamma rays.
           </p>
         </div>
+
+        <Category />
 
         <div className="text-center mt-6 w-[80%] lg:w-[40%] mx-auto flex flex-col gap-2">
           <p className="tracking-[1rem] font-semibold text-red-600">
