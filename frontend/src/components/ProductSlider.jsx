@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -42,7 +43,7 @@ const ProductSlider = ({ products, autoSlideInterval = 3000 }) => {
           onClick={prevSlide}
           className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
         >
-          ◀
+          <ArrowRight className="rotate-180" />
         </button>
 
         <div className="flex items-center gap-4 relative w-[80%] justify-center">
@@ -73,7 +74,7 @@ const ProductSlider = ({ products, autoSlideInterval = 3000 }) => {
           onClick={nextSlide}
           className="p-2 bg-gray-200 rounded-full hover:bg-gray-300"
         >
-          ▶
+          <ArrowRight />
         </button>
       </div>
 
