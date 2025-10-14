@@ -1,11 +1,15 @@
-import { useParams } from "react-router-dom";
-import { useState } from "react";
+// src/pages/ProductDetails.js
+import { useParams, useNavigate } from "react-router-dom";
+import { useState, useContext, Fragment } from "react";
+import { CartContext } from "../context/CartContext";
 import products from "../dataProduct/ProductData";
-import { Fragment } from "react";
 import Category from "../components/Category";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const { addToCart } = useContext(CartContext);
+
   const product = products.find((p) => p.id === parseInt(id));
 
   const [selectedDiameter, setSelectedDiameter] = useState(
@@ -23,29 +27,53 @@ const ProductDetails = () => {
     );
   }
 
+  const handleAddToCart = () => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.images[0].url,
+      diameter: selectedDiameter,
+      length: selectedLength,
+      quantity,
+    });
+    navigate("/cart");
+  };
+
+  const handleBuyNow = () => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.images[0].url,
+      diameter: selectedDiameter,
+      length: selectedLength,
+      quantity,
+    });
+    navigate("/checkout");
+  };
+
   const increaseQty = () => setQuantity((prev) => prev + 1);
   const decreaseQty = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
     <Fragment>
-      {/* Header Section */}
+      {/* Header */}
       <div className="text-center my-14 px-4 font-bold text-red-500">
         <h4>B&B DENTAL PRODUCTS</h4>
       </div>
 
       <Category />
 
-      {/* Product Details Section */}
+      {/* Product Details */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-4 lg:px-20 mb-20 mt-10 items-start md:mt-24">
-        {/* Left: Product Image Gallery */}
+        {/* Image Gallery */}
         <div className="flex flex-col items-center">
           <img
             src={mainImage}
             alt={product.images[0].alt}
             className="w-full max-w-[400px] h-auto rounded-lg shadow-md object-contain"
           />
-
-          {/* Thumbnails */}
           <div className="flex gap-3 mt-4">
             {product.images.map((img, index) => (
               <img
@@ -63,15 +91,15 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        {/* Right: Product Info */}
+        {/* Info */}
         <div>
           <h1 className="text-red-600 text-3xl font-semibold mb-4">
             {product.name}
           </h1>
-          <p className="text-lg font-medium mb-2">{product.price}</p>
+          <p className="text-lg font-medium mb-2">${product.price}</p>
           <p className="text-sm text-gray-500 mb-6">SKU: {product.sku}</p>
 
-          {/* Diameter Options */}
+          {/* Diameter */}
           <div className="mb-4">
             <h4 className="font-semibold mb-2">Diameter:</h4>
             <div className="flex flex-wrap gap-2">
@@ -91,7 +119,7 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          {/* Length Options */}
+          {/* Length */}
           <div className="mb-4">
             <h4 className="font-semibold mb-2">Length:</h4>
             <div className="flex flex-wrap gap-2">
@@ -111,7 +139,7 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          {/* Quantity Selector */}
+          {/* Quantity */}
           <div className="flex items-center gap-3 mb-6">
             <h4 className="font-semibold">Quantity:</h4>
             <div className="flex items-center border rounded-lg">
@@ -133,10 +161,16 @@ const ProductDetails = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
-            <button className="bg-gray-800 text-white py-2 px-6 rounded-md hover:bg-gray-700 transition">
+            <button
+              onClick={handleAddToCart}
+              className="bg-gray-800 text-white py-2 px-6 rounded-md hover:bg-gray-700 transition"
+            >
               Add to Cart
             </button>
-            <button className="bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition">
+            <button
+              onClick={handleBuyNow}
+              className="bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition"
+            >
               Buy It Now
             </button>
           </div>
@@ -148,13 +182,6 @@ const ProductDetails = () => {
           <p className="text-sm text-gray-600 mb-6">
             {product.specifications.delivery}
           </p>
-
-          {/* Share Icons (optional) */}
-          <div className="flex gap-3 text-gray-600">
-            <i className="fab fa-facebook-f cursor-pointer hover:text-red-500"></i>
-            <i className="fab fa-twitter cursor-pointer hover:text-red-500"></i>
-            <i className="fab fa-pinterest cursor-pointer hover:text-red-500"></i>
-          </div>
         </div>
       </div>
 

@@ -1,120 +1,352 @@
-// products.js
-
-import productImg1 from "../assets/unique (1).png";
-import productImg2 from "../assets/unique (2).png";
-import productImg3 from "../assets/unique (3).png";
-// 👆 import all 8 product images
-
+const conexaConnectionProducts = [
+  {
+    id: 101,
+    category: "CONEXA CONNECTION",
+    brand: "B&B Dental",
+    name: "CONEXA Implant Alpha",
+    price: 399.0,
+    sku: "CONEXA-ALPHA",
+    images: [
+      { url: "/images/conexa1.png", alt: "CONEXA Alpha Front" },
+      { url: "/images/conexa1b.png", alt: "CONEXA Alpha Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 3.5", "Ø 4.0"],
+      lengths: [8, 10, 12],
+      warranty: "18 months",
+      delivery: "Free shipping worldwide",
+    },
+    description: "Precision CONEXA implant for optimal torque control.",
+    properties: [
+      "Titanium Grade 5",
+      "Single CONEXA connection",
+      "High torque resistance",
+    ],
+  },
+  {
+    id: 102,
+    category: "CONEXA CONNECTION",
+    brand: "B&B Dental",
+    name: "CONEXA Implant Beta",
+    price: 419.0,
+    sku: "CONEXA-BETA",
+    images: [
+      { url: "/images/conexa2.png", alt: "CONEXA Beta Front" },
+      { url: "/images/conexa2b.png", alt: "CONEXA Beta Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 4.0", "Ø 4.5"],
+      lengths: [10, 12, 14],
+      warranty: "18 months",
+      delivery: "Includes installation kit",
+    },
+    description: "Reliable CONEXA implant for posterior regions.",
+    properties: [
+      "Platform switching",
+      "Color-coded instruments",
+      "Autoclavable",
+    ],
+  },
+  {
+    id: 103,
+    category: "CONEXA CONNECTION",
+    brand: "B&B Dental",
+    name: "CONEXA Implant Gamma",
+    price: 439.0,
+    sku: "CONEXA-GAMMA",
+    images: [
+      { url: "/images/conexa3.png", alt: "CONEXA Gamma Front" },
+      { url: "/images/conexa3b.png", alt: "CONEXA Gamma Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 4.5", "Ø 5.0"],
+      lengths: [12, 14, 16],
+      warranty: "24 months",
+      delivery: "Delivered within 5 days",
+    },
+    description: "Advanced CONEXA implant for high stability cases.",
+    properties: [
+      "Micro-threaded neck",
+      "Grade 4 Titanium",
+      "Ideal for D1-D2 bone types",
+    ],
+  },
+];
+const subperiostealImplants = [
+  {
+    id: 401,
+    category: "SUBPERIOSTEAL IMPLANT",
+    brand: "B&B Dental",
+    name: "Subperiosteal Implant Delta",
+    price: 599.0,
+    sku: "SUBP-DELTA",
+    images: [
+      { url: "/images/subp1.png", alt: "Subperiosteal Delta Top" },
+      { url: "/images/subp1b.png", alt: "Subperiosteal Delta Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 3.5", "Ø 4.0"],
+      lengths: [10, 12],
+      warranty: "12 months",
+      delivery: "Custom fit available",
+    },
+    description: "Implant for patients with severe bone loss.",
+    properties: [
+      "Custom framework",
+      "Ideal for edentulous jaws",
+      "Minimally invasive",
+    ],
+  },
+  {
+    id: 402,
+    category: "SUBPERIOSTEAL IMPLANT",
+    brand: "B&B Dental",
+    name: "Subperiosteal Implant Sigma",
+    price: 625.0,
+    sku: "SUBP-SIGMA",
+    images: [
+      { url: "/images/subp2.png", alt: "Subperiosteal Sigma Top" },
+      { url: "/images/subp2b.png", alt: "Subperiosteal Sigma Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 4.0", "Ø 4.5"],
+      lengths: [12, 14],
+      warranty: "12 months",
+      delivery: "Includes surgical template",
+    },
+    description: "Subperiosteal implant for complex anatomy.",
+    properties: [
+      "Titanium mesh",
+      "CAD/CAM design",
+      "Bone adaptation technology",
+    ],
+  },
+];
+const surgicalKits = [
+  {
+    id: 301,
+    category: "B&B SURGICAL KITS",
+    brand: "B&B Dental",
+    name: "Surgical Kit Prime",
+    price: 899.0,
+    sku: "KIT-PRIME",
+    images: [
+      { url: "/images/kit1.png", alt: "Surgical Kit Prime Top" },
+      { url: "/images/kit1b.png", alt: "Surgical Kit Prime Open" },
+    ],
+    specifications: {
+      diameters: ["Ø 2.0", "Ø 2.5"],
+      lengths: [8, 10],
+      warranty: "36 months",
+      delivery: "Includes training manual",
+    },
+    description: "Complete surgical kit for implant procedures.",
+    properties: [
+      "Autoclavable tray",
+      "Color-coded drills",
+      "Depth stops included",
+    ],
+  },
+  {
+    id: 302,
+    category: "B&B SURGICAL KITS",
+    brand: "B&B Dental",
+    name: "Surgical Kit Ultra",
+    price: 919.0,
+    sku: "KIT-ULTRA",
+    images: [
+      { url: "/images/kit2.png", alt: "Surgical Kit Ultra Top" },
+      { url: "/images/kit2b.png", alt: "Surgical Kit Ultra Open" },
+    ],
+    specifications: {
+      diameters: ["Ø 2.5", "Ø 3.0"],
+      lengths: [10, 12],
+      warranty: "36 months",
+      delivery: "Includes sterilization pouch",
+    },
+    description: "Advanced kit for guided surgery.",
+    properties: [
+      "Laser-etched markings",
+      "Ergonomic handles",
+      "Reusable components",
+    ],
+  },
+];
+const uniqueImplants = [
+  {
+    id: 201,
+    category: "6 UNIQUE IMPLANT",
+    brand: "B&B Dental",
+    name: "Unique Implant Orion",
+    price: 499.0,
+    sku: "UNIQ-ORION",
+    images: [
+      { url: "/images/unique1.png", alt: "Unique Orion Front" },
+      { url: "/images/unique1b.png", alt: "Unique Orion Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 3.0", "Ø 3.5"],
+      lengths: [6, 8, 10],
+      warranty: "24 months",
+      delivery: "Delivered within 5 days",
+    },
+    description: "Unique implant design for esthetic zones.",
+    properties: [
+      "Platform switching",
+      "Micro-grooves",
+      "Optimized for esthetics",
+    ],
+  },
+  {
+    id: 202,
+    category: "6 UNIQUE IMPLANT",
+    brand: "B&B Dental",
+    name: "Unique Implant Vega",
+    price: 515.0,
+    sku: "UNIQ-VEGA",
+    images: [
+      { url: "/images/unique2.png", alt: "Unique Vega Front" },
+      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 3.5", "Ø 4.0"],
+      lengths: [8, 10, 12],
+      warranty: "24 months",
+      delivery: "Includes surgical guide",
+    },
+    description: "Implant for challenging bone structures.",
+    properties: [
+      "Self-tapping thread",
+      "Grade 5 Titanium",
+      "Color-coded system",
+    ],
+  },
+  {
+    id: 203,
+    category: "6 UNIQUE IMPLANT",
+    brand: "B&B Dental",
+    name: "Unique Implant Vega",
+    price: 515.0,
+    sku: "UNIQ-VEGA",
+    images: [
+      { url: "/images/unique2.png", alt: "Unique Vega Front" },
+      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 3.5", "Ø 4.0"],
+      lengths: [8, 10, 12],
+      warranty: "24 months",
+      delivery: "Includes surgical guide",
+    },
+    description: "Implant for challenging bone structures.",
+    properties: [
+      "Self-tapping thread",
+      "Grade 5 Titanium",
+      "Color-coded system",
+    ],
+  },
+  {
+    id: 204,
+    category: "6 UNIQUE IMPLANT",
+    brand: "B&B Dental",
+    name: "Unique Implant Vega",
+    price: 515.0,
+    sku: "UNIQ-VEGA",
+    images: [
+      { url: "/images/unique2.png", alt: "Unique Vega Front" },
+      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 3.5", "Ø 4.0"],
+      lengths: [8, 10, 12],
+      warranty: "24 months",
+      delivery: "Includes surgical guide",
+    },
+    description: "Implant for challenging bone structures.",
+    properties: [
+      "Self-tapping thread",
+      "Grade 5 Titanium",
+      "Color-coded system",
+    ],
+  },
+  {
+    id: 205,
+    category: "6 UNIQUE IMPLANT",
+    brand: "B&B Dental",
+    name: "Unique Implant Vega",
+    price: 515.0,
+    sku: "UNIQ-VEGA",
+    images: [
+      { url: "/images/unique2.png", alt: "Unique Vega Front" },
+      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 3.5", "Ø 4.0"],
+      lengths: [8, 10, 12],
+      warranty: "24 months",
+      delivery: "Includes surgical guide",
+    },
+    description: "Implant for challenging bone structures.",
+    properties: [
+      "Self-tapping thread",
+      "Grade 5 Titanium",
+      "Color-coded system",
+    ],
+  },
+  {
+    id: 206,
+    category: "6 UNIQUE IMPLANT",
+    brand: "B&B Dental",
+    name: "Unique Implant Vega",
+    price: 515.0,
+    sku: "UNIQ-VEGA",
+    images: [
+      { url: "/images/unique2.png", alt: "Unique Vega Front" },
+      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 3.5", "Ø 4.0"],
+      lengths: [8, 10, 12],
+      warranty: "24 months",
+      delivery: "Includes surgical guide",
+    },
+    description: "Implant for challenging bone structures.",
+    properties: [
+      "Self-tapping thread",
+      "Grade 5 Titanium",
+      "Color-coded system",
+    ],
+  },
+  {
+    id: 207,
+    category: "6 UNIQUE IMPLANT",
+    brand: "B&B Dental",
+    name: "Unique Implant Vega",
+    price: 515.0,
+    sku: "UNIQ-VEGA",
+    images: [
+      { url: "/images/unique2.png", alt: "Unique Vega Front" },
+      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+    ],
+    specifications: {
+      diameters: ["Ø 3.5", "Ø 4.0"],
+      lengths: [8, 10, 12],
+      warranty: "24 months",
+      delivery: "Includes surgical guide",
+    },
+    description: "Implant for challenging bone structures.",
+    properties: [
+      "Self-tapping thread",
+      "Grade 5 Titanium",
+      "Color-coded system",
+    ],
+  },
+];
 const products = [
-  {
-    id: 1,
-    brand: "B&B DENTAL IMPLANT",
-    name: "DURA-VIT 3P IMPLANT",
-    price: "$455.00",
-    sku: "EV-4008",
-    images: [{ url: productImg1, alt: "B&B Dental Implant - DURA-VIT 3P" }],
-    specifications: {
-      diameters: ["Ø 4.0", "Ø 4.0", "Ø 4.5", "Ø 5.0"],
-      lengths: [8, 8, 10, 12, 14, 16],
-      warranty: "12 months",
-      delivery: "Delivery and Installation are all included",
-    },
-    description:
-      "The DURA-VIT 3P IMPLANT is suitable for all surgical procedures and excellent in all bone types. Thanks to its characteristics, it guarantees better control during implant placement and high primary stability.",
-    properties: [
-      "Excellent in all bone types (especially D1-D2)",
-      "Ensures high primary stability",
-      "Ideal in sites next to sinus or nerve",
-      "Suitable for all surgical procedures",
-      "Made from Grade 4 Titanium",
-    ],
-    colourCodeGuide:
-      "The colour code of the implant diameters allows intuitive selection of the surgical instruments.",
-    lineDetails: {
-      diameters: ["3.5 mm", "4.0 mm", "4.5 mm", "5.0 mm"],
-      lengths: ["6.5 mm", "8.0 mm", "10 mm", "12 mm", "14 mm"],
-      connection: "Single CONEXA connection",
-    },
-    instrumentation: {
-      included: ["Drills", "Compactors", "Countersinks", "Depth Stops"],
-      description:
-        "Inside the surgical instrumentation, there are the instruments for correct preparation of implant sites.",
-    },
-  },
-  {
-    id: 2,
-    brand: "B&B DENTAL IMPLANT",
-    name: "DURA-VIT EV IMPLANT",
-    price: "$420.00",
-    sku: "EV-4010",
-    images: [{ url: productImg2, alt: "B&B Dental Implant - DURA-VIT EV" }],
-    specifications: {
-      diameters: ["Ø 4.0", "Ø 4.0", "Ø 4.5", "Ø 5.0"],
-      lengths: [8, 8, 10, 12, 14, 16],
-      warranty: "12 months",
-      delivery: "Delivery and Installation are all included",
-    },
-    description:
-      "The DURA-VIT 3P IMPLANT is suitable for all surgical procedures and excellent in all bone types. Thanks to its characteristics, it guarantees better control during implant placement and high primary stability.",
-    properties: [
-      "Excellent in all bone types (especially D1-D2)",
-      "Ensures high primary stability",
-      "Ideal in sites next to sinus or nerve",
-      "Suitable for all surgical procedures",
-      "Made from Grade 4 Titanium",
-    ],
-    colourCodeGuide:
-      "The colour code of the implant diameters allows intuitive selection of the surgical instruments.",
-    lineDetails: {
-      diameters: ["3.5 mm", "4.0 mm", "4.5 mm", "5.0 mm"],
-      lengths: ["6.5 mm", "8.0 mm", "10 mm", "12 mm", "14 mm"],
-      connection: "Single CONEXA connection",
-    },
-    instrumentation: {
-      included: ["Drills", "Compactors", "Countersinks", "Depth Stops"],
-      description:
-        "Inside the surgical instrumentation, there are the instruments for correct preparation of implant sites.",
-    },
-    // ...rest of details
-  },
-  {
-    id: 3,
-    brand: "B&B DENTAL IMPLANT",
-    name: "DURA-VIT PRO IMPLANT",
-    price: "$499.00",
-    sku: "EV-4020",
-    images: [{ url: productImg3, alt: "B&B Dental Implant - DURA-VIT PRO" }],
-    // ...rest of details
-  },
-  {
-    id: 4,
-    brand: "B&B DENTAL IMPLANT",
-    name: "DURA-VIT EV IMPLANT",
-    price: "$420.00",
-    sku: "EV-4010",
-    images: [{ url: productImg2, alt: "B&B Dental Implant - DURA-VIT EV" }],
-    // ...rest of details
-  },
-  {
-    id: 5,
-    brand: "B&B DENTAL IMPLANT",
-    name: "DURA-VIT PRO IMPLANT",
-    price: "$499.00",
-    sku: "EV-4020",
-    images: [{ url: productImg3, alt: "B&B Dental Implant - DURA-VIT PRO" }],
-    // ...rest of details
-  },
-  {
-    id: 6,
-    brand: "B&B DENTAL IMPLANT",
-    name: "DURA-VIT EV IMPLANT",
-    price: "$420.00",
-    sku: "EV-4010",
-    images: [{ url: productImg2, alt: "B&B Dental Implant - DURA-VIT EV" }],
-    // ...rest of details
-  },
-
-  // 👇 add products up to 8
+  ...conexaConnectionProducts,
+  ...uniqueImplants,
+  ...surgicalKits,
+  ...subperiostealImplants,
 ];
 
 export default products;

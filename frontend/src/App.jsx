@@ -10,22 +10,31 @@ import Uniqueimplant from "./pages/Uniqueimplant";
 import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
 import Footer from "./components/Footer";
+import { CartProvider } from "./context/CartContext";
+import Checkout from "./pages/CheckOut";
+import CategoryPage from "./pages/CategoryPage";
+import AllProductsPage from "./pages/AllProductPage";
 
 function App() {
   return (
-    <Fragment>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/subperiosteal" element={<Subperiosteal />} />
-        <Route path="/surgicalkit" element={<Surgicalkit />} />
-        <Route path="/conexaconnection" element={<Conexaconnection />} />
-        <Route path="/uniqueimplant" element={<Uniqueimplant />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
-      </Routes>
-      <Footer />
-    </Fragment>
+    <CartProvider>
+      <Fragment>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/subperiosteal" element={<Subperiosteal />} />
+          <Route path="/surgicalkit" element={<Surgicalkit />} />
+          <Route path="/conexaconnection" element={<Conexaconnection />} />
+          <Route path="/uniqueimplant" element={<Uniqueimplant />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/all-product" element={<AllProductsPage />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/category/:name" element={<CategoryPage />} />
+        </Routes>
+        <Footer />
+      </Fragment>
+    </CartProvider>
   );
 }
 
