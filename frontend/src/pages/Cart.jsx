@@ -24,10 +24,15 @@ const Cart = () => {
       <h2 className="text-3xl font-bold mb-6 text-red-600">Your Cart</h2>
 
       {cartItems.length === 0 ? (
-        <>
-          <p className="text-center text-gray-500">Your cart is empty.</p>
-          <button>Start Shopping</button>
-        </>
+        <div className="flex align-middle justify-center flex-col gap-2">
+          <p className="text-center text-gray-500 ">Your cart is empty.</p>
+          <button
+            onClick={() => navigate("/all-product")}
+            className="w-fit px-8 py-4 bg-red-600 text-white rounded-2xl font-bold m-auto"
+          >
+            Start Shopping
+          </button>
+        </div>
       ) : (
         <div className="space-y-6">
           {cartItems.map((item, index) => (
