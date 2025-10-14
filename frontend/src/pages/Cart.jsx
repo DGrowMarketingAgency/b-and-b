@@ -24,7 +24,10 @@ const Cart = () => {
       <h2 className="text-3xl font-bold mb-6 text-red-600">Your Cart</h2>
 
       {cartItems.length === 0 ? (
-        <p className="text-center text-gray-500">Your cart is empty.</p>
+        <>
+          <p className="text-center text-gray-500">Your cart is empty.</p>
+          <button>Start Shopping</button>
+        </>
       ) : (
         <div className="space-y-6">
           {cartItems.map((item, index) => (
