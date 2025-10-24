@@ -48,7 +48,7 @@ const ProductSlider = ({ products, autoSlideInterval = 3000 }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className="flex flex-col items-center justify-center w-full overflow-hidden">
       {/* Main slider */}
       <div className="flex items-center justify-center gap-4">
         <button
