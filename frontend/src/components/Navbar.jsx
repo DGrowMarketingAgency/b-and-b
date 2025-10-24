@@ -51,7 +51,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-black/90 absolute w-full top-20 left-0 z-10 border-t border-white/50">
+        <div className="lg:hidden bg-black absolute w-full top-20 left-0 z-10 border-t border-white/50">
           <nav className="w-[90%] h-[80vh] mx-auto py-4">
             <ul className="text-white/90 flex flex-col gap-10 font-semibold">
               <li>
