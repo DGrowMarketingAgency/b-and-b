@@ -60,12 +60,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/subperiosteal" onClick={() => setIsOpen(false)}>
+                <Link to="/conexaconnection" onClick={() => setIsOpen(false)}>
                   CONEXA CONNECTION
                 </Link>
               </li>
               <li>
-                <Link to="/surgicalkit" onClick={() => setIsOpen(false)}>
+                <Link to="/uniqueimplant" onClick={() => setIsOpen(false)}>
                   6 UNIQUE IMPLANT
                 </Link>
               </li>

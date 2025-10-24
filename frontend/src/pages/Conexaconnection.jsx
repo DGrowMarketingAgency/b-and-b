@@ -39,7 +39,7 @@ const Conexaconnection = () => {
 
         {/* Content on top */}
         <div className="absolute z-20 flex flex-col items-center gap-2 lg:gap-3">
-          <p className="text-red-500 tracking-[.3rem] font-semibold">
+          <p className="text-red-500 tracking-[.3rem] font-semibold text-center">
             EV, 3P, WIDE and PTERYGO implants
           </p>
           <h1 className="text-white text-2xl md:text-5xl font-bold">

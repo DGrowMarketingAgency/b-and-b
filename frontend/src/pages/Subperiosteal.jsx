@@ -23,7 +23,7 @@ const Subperiosteal = () => {
           <p className="text-red-500 tracking-[.3rem] font-semibold">
             FULL digital CUSTOMISED
           </p>
-          <h1 className="text-white text-2xl md:text-5xl font-bold">
+          <h1 className="text-white text-2xl md:text-5xl font-bold text-center">
             SUBPERIOSTEAL IMPLANT 'IUXTA'
           </h1>
           <p className="text-white text-center w-[80%] md:w-[60%] lg:w-[55%]">
@@ -38,9 +38,9 @@ const Subperiosteal = () => {
           <img className="w-[80% ] m-auto" src={sgOne} alt="" />
         </div>
         <div className=" text-black flex flex-col justify-center gap-4  p-4 text-center">
-          <div className="">
+          <div className="flex flex-col gap-4">
             <p className="text-gray-500 text-xs font-bold">IUXTA IMPLANTS</p>
-            <h2 className="text-red-600 text-2xl font-bold">
+            <h2 className="text-red-600 text-2xl font-bold ">
               subperiosteal implants
             </h2>
             <p>
@@ -48,7 +48,7 @@ const Subperiosteal = () => {
               Iuxta implants are positioned subperiosteally, they are placed by
               taking advantage of the morphology of the bone structure and
               subsequently fixed to the bone with the use of osteosynthesis
-              screws.{" "}
+              screws.
             </p>
           </div>
         </div>
