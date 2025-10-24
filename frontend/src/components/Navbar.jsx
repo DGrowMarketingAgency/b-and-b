@@ -38,9 +38,9 @@ const Navbar = () => {
 
           {/* Right Side Icons */}
           <div className="flex gap-6 text-white/90">
-            <button onClick={() => cartPage("/cart")}>
+            {/* <button onClick={() => cartPage("/cart")}>
               <ShoppingBag />
-            </button>
+            </button> */}
             {/* Mobile Toggle Button */}
             <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <X size={28} /> : <Logs size={28} />}

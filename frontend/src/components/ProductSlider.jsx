@@ -3,23 +3,35 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const ProductSlider = ({ products, autoSlideInterval = 3000 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
 
-  if (!products || products.length === 0) {
+  // ✅ Filter products to show only "6 UNIQUE IMPLANT" category
+  const filteredProducts =
+    products?.filter((product) =>
+      product.category?.toLowerCase().includes("6 unique implant")
+    ) || [];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  if (filteredProducts.length === 0) {
     return <p className="text-center text-gray-500">No products available</p>;
   }
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % products.length);
+    setCurrentIndex((prev) => (prev + 1) % filteredProducts.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + filteredProducts.length) % filteredProducts.length
+    );
   };
 
   const getSlideIndex = (offset) => {
-    return (currentIndex + offset + products.length) % products.length;
+    return (
+      (currentIndex + offset + filteredProducts.length) %
+      filteredProducts.length
+    );
   };
 
   // Auto slider
@@ -32,7 +44,7 @@ const ProductSlider = ({ products, autoSlideInterval = 3000 }) => {
   }, [currentIndex, autoSlideInterval]);
 
   const handleProductClick = (productId) => {
-    navigate(`/product/${productId}`); // Navigate to product page
+    navigate(`/product/${productId}`);
   };
 
   return (
@@ -48,7 +60,7 @@ const ProductSlider = ({ products, autoSlideInterval = 3000 }) => {
 
         <div className="flex items-center gap-4 relative w-[80%] justify-center">
           {[-1, 0, 1].map((offset) => {
-            const product = products[getSlideIndex(offset)];
+            const product = filteredProducts[getSlideIndex(offset)];
             const scale = offset === 0 ? 1 : 0.7;
             const zIndex = offset === 0 ? 10 : 5;
             const opacity = offset === 0 ? 1 : 0.5;
@@ -80,12 +92,12 @@ const ProductSlider = ({ products, autoSlideInterval = 3000 }) => {
 
       {/* Product name */}
       <p className="mt-3 font-semibold text-lg text-center">
-        {products[currentIndex]?.name}
+        {filteredProducts[currentIndex]?.name}
       </p>
 
       {/* Dots navigation */}
       <div className="flex gap-2 mt-4">
-        {products.map((_, index) => (
+        {filteredProducts.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}

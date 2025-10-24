@@ -96,11 +96,11 @@ const ProductDetails = () => {
           <h1 className="text-red-600 text-3xl font-semibold mb-4">
             {product.name}
           </h1>
-          <p className="text-lg font-medium mb-2">${product.price}</p>
+          {/* <p className="text-lg font-medium mb-2">${product.price}</p> */}
           <p className="text-sm text-gray-500 mb-6">SKU: {product.sku}</p>
 
           {/* Diameter */}
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <h4 className="font-semibold mb-2">Diameter:</h4>
             <div className="flex flex-wrap gap-2">
               {product.specifications.diameters.map((d, i) => (
@@ -117,10 +117,10 @@ const ProductDetails = () => {
                 </button>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Length */}
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <h4 className="font-semibold mb-2">Length:</h4>
             <div className="flex flex-wrap gap-2">
               {product.specifications.lengths.map((len, i) => (
@@ -137,10 +137,10 @@ const ProductDetails = () => {
                 </button>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Quantity */}
-          <div className="flex items-center gap-3 mb-6">
+          {/* <div className="flex items-center gap-3 mb-6">
             <h4 className="font-semibold">Quantity:</h4>
             <div className="flex items-center border rounded-lg">
               <button
@@ -157,10 +157,10 @@ const ProductDetails = () => {
                 +
               </button>
             </div>
-          </div>
+          </div> */}
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+          {/* <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <button
               onClick={handleAddToCart}
               className="bg-gray-800 text-white py-2 px-6 rounded-md hover:bg-gray-700 transition"
@@ -173,20 +173,33 @@ const ProductDetails = () => {
             >
               Buy It Now
             </button>
-          </div>
+          </div> */}
 
           {/* Warranty & Delivery */}
-          <p className="text-sm text-gray-600 mb-4">
+          {/* <p className="text-sm text-gray-600 mb-4">
             <strong>{product.specifications.warranty}</strong> warranty.
           </p>
           <p className="text-sm text-gray-600 mb-6">
             {product.specifications.delivery}
-          </p>
+          </p> */}
+          <div className="">
+            <h2 className="text-xl font-semibold text-gray-800 mb-3">
+              All Surgical Procedures and Excellent in All Bone Types
+            </h2>
+            <p className="text-gray-600 mb-6">{product.description}</p>
+
+            <h3 className="text-lg font-semibold mb-2">Properties</h3>
+            <ul className="list-disc ml-6 text-gray-700 space-y-2">
+              {product.properties?.map((prop, i) => (
+                <li key={i}>{prop}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
       {/* Description */}
-      <div className="w-[90%] lg:w-[70%] mx-auto mb-20">
+      {/* <div className="w-[90%] lg:w-[70%] mx-auto mb-20">
         <h2 className="text-xl font-semibold text-gray-800 mb-3">
           All Surgical Procedures and Excellent in All Bone Types
         </h2>
@@ -198,7 +211,7 @@ const ProductDetails = () => {
             <li key={i}>{prop}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </Fragment>
   );
 };

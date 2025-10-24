@@ -1,3 +1,9 @@
+import unique1 from "../assets/unique (2).png";
+import unique2 from "../assets/unique (3).png";
+import unique3 from "../assets/unique (4).png";
+import unique4 from "../assets/unique (5).png";
+import unique5 from "../assets/unique (6).png";
+import unique6 from "../assets/unique (1).png";
 const conexaConnectionProducts = [
   {
     id: 101,
@@ -7,8 +13,8 @@ const conexaConnectionProducts = [
     price: 399.0,
     sku: "CONEXA-ALPHA",
     images: [
-      { url: "/images/conexa1.png", alt: "CONEXA Alpha Front" },
-      { url: "/images/conexa1b.png", alt: "CONEXA Alpha Side" },
+      { url: `${unique1}`, alt: "CONEXA Alpha Front" },
+      { url: "../assets/unique (2).png", alt: "CONEXA Alpha Side" },
     ],
     specifications: {
       diameters: ["Ø 3.5", "Ø 4.0"],
@@ -177,12 +183,12 @@ const uniqueImplants = [
     id: 201,
     category: "6 UNIQUE IMPLANT",
     brand: "B&B Dental",
-    name: "Unique Implant Orion",
+    name: "EV IMPLANT",
     price: 499.0,
-    sku: "UNIQ-ORION",
+    sku: " EV-4008",
     images: [
-      { url: "/images/unique1.png", alt: "Unique Orion Front" },
-      { url: "/images/unique1b.png", alt: "Unique Orion Side" },
+      { url: `${unique1}`, alt: "Unique Orion Front" },
+      { url: `${unique1}`, alt: "Unique Orion Side" },
     ],
     specifications: {
       diameters: ["Ø 3.0", "Ø 3.5"],
@@ -190,23 +196,26 @@ const uniqueImplants = [
       warranty: "24 months",
       delivery: "Delivered within 5 days",
     },
-    description: "Unique implant design for esthetic zones.",
+    description:
+      "The DURA-VIT 3P IMPLANT is suitable for all surgical procedures and excellent in all bone types, and thanks to its characteristics it guarantees better control during implant placement and high primary stability.",
     properties: [
-      "Platform switching",
-      "Micro-grooves",
-      "Optimized for esthetics",
+      "Excellent in all bone types (especially D1-D2)",
+      " Ensure high primary stability",
+      "Ideal in sites next to sinus or nerve",
+      "Suitable for all surgical procedures",
+      "Grade 4 Titanium",
     ],
   },
   {
     id: 202,
     category: "6 UNIQUE IMPLANT",
     brand: "B&B Dental",
-    name: "Unique Implant Vega",
+    name: "DURA-VIT 3P IMPLANT",
     price: 515.0,
-    sku: "UNIQ-VEGA",
+    sku: "3P-3508",
     images: [
-      { url: "/images/unique2.png", alt: "Unique Vega Front" },
-      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+      { url: `${unique2}`, alt: "Unique Vega Front" },
+      { url: `${unique2}`, alt: "Unique Vega Side" },
     ],
     specifications: {
       diameters: ["Ø 3.5", "Ø 4.0"],
@@ -214,23 +223,26 @@ const uniqueImplants = [
       warranty: "24 months",
       delivery: "Includes surgical guide",
     },
-    description: "Implant for challenging bone structures.",
+    description:
+      "The DURA-VIT 3P IMPLANT is suitable for all surgical procedures and excellent in all bone types, and thanks to its characteristics it guarantees better control during implant placement and high primary stability.",
     properties: [
-      "Self-tapping thread",
-      "Grade 5 Titanium",
-      "Color-coded system",
+      " Excellent in all bone types (especially D1-D2)",
+      " Ensure high primary stability",
+      " Ideal in sites next to sinus or nerve",
+      " Suitable for all surgical procedures",
+      " Grade 4 Titanium",
     ],
   },
   {
     id: 203,
     category: "6 UNIQUE IMPLANT",
     brand: "B&B Dental",
-    name: "Unique Implant Vega",
+    name: "WIDE IMPLANT",
     price: 515.0,
-    sku: "UNIQ-VEGA",
+    sku: "WIDE-5506",
     images: [
-      { url: "/images/unique2.png", alt: "Unique Vega Front" },
-      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+      { url: `${unique3}`, alt: "Unique Vega Front" },
+      { url: `${unique3}`, alt: "Unique Vega Side" },
     ],
     specifications: {
       diameters: ["Ø 3.5", "Ø 4.0"],
@@ -238,23 +250,28 @@ const uniqueImplants = [
       warranty: "24 months",
       delivery: "Includes surgical guide",
     },
-    description: "Implant for challenging bone structures.",
+    description:
+      "The DURA-VIT PTERYGO implant is the solution designed for maxillary atrophies as an alternative to regenerative or sinus lift procedures.",
     properties: [
-      "Self-tapping thread",
-      "Grade 5 Titanium",
-      "Color-coded system",
+      "Ideal in the area behind the tuber.",
+
+      "Ideal for supporting all-on-six.",
+
+      "Can also be inserted with a guided technique.",
+
+      "Grade 4 Titanium.",
     ],
   },
   {
     id: 204,
     category: "6 UNIQUE IMPLANT",
     brand: "B&B Dental",
-    name: "Unique Implant Vega",
+    name: "PTERYGOID",
     price: 515.0,
-    sku: "UNIQ-VEGA",
+    sku: "PTI-4716",
     images: [
-      { url: "/images/unique2.png", alt: "Unique Vega Front" },
-      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+      { url: `${unique4}`, alt: "Unique Vega Front" },
+      { url: `${unique4}`, alt: "Unique Vega Side" },
     ],
     specifications: {
       diameters: ["Ø 3.5", "Ø 4.0"],
@@ -262,23 +279,28 @@ const uniqueImplants = [
       warranty: "24 months",
       delivery: "Includes surgical guide",
     },
-    description: "Implant for challenging bone structures.",
+    description:
+      "The DURA-VIT PTERYGO implant is the solution designed for maxillary atrophies as an alternative to regenerative or sinus lift procedures.",
     properties: [
-      "Self-tapping thread",
-      "Grade 5 Titanium",
-      "Color-coded system",
+      " Ideal in the area behind the tuber.",
+
+      " Ideal for supporting all-on-six.",
+
+      " Can also be inserted with a guided technique.",
+
+      " Grade 4 Titanium.",
     ],
   },
   {
     id: 205,
     category: "6 UNIQUE IMPLANT",
     brand: "B&B Dental",
-    name: "Unique Implant Vega",
+    name: "SLIM IMPLANT",
     price: 515.0,
-    sku: "UNIQ-VEGA",
+    sku: "3P-3008",
     images: [
-      { url: "/images/unique2.png", alt: "Unique Vega Front" },
-      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+      { url: `${unique5}`, alt: "Unique Vega Front" },
+      { url: `${unique5}`, alt: "Unique Vega Side" },
     ],
     specifications: {
       diameters: ["Ø 3.5", "Ø 4.0"],
@@ -286,23 +308,28 @@ const uniqueImplants = [
       warranty: "24 months",
       delivery: "Includes surgical guide",
     },
-    description: "Implant for challenging bone structures.",
+    description:
+      "The DURA-VIT PTERYGO implant is the solution designed for maxillary atrophies as an alternative to regenerative or sinus lift procedures.",
     properties: [
-      "Self-tapping thread",
-      "Grade 5 Titanium",
-      "Color-coded system",
+      " Ideal in the area behind the tuber.",
+
+      " Ideal for supporting all-on-six.",
+
+      " Can also be inserted with a guided technique.",
+
+      " Grade 4 Titanium.",
     ],
   },
   {
     id: 206,
     category: "6 UNIQUE IMPLANT",
     brand: "B&B Dental",
-    name: "Unique Implant Vega",
+    name: "MINI IMPLANT",
     price: 515.0,
     sku: "UNIQ-VEGA",
     images: [
-      { url: "/images/unique2.png", alt: "Unique Vega Front" },
-      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
+      { url: `${unique6}`, alt: "Unique Vega Front" },
+      { url: `${unique6}`, alt: "Unique Vega Side" },
     ],
     specifications: {
       diameters: ["Ø 3.5", "Ø 4.0"],
@@ -310,35 +337,12 @@ const uniqueImplants = [
       warranty: "24 months",
       delivery: "Includes surgical guide",
     },
-    description: "Implant for challenging bone structures.",
+    description:
+      "The DURA-VIT MINI implant system is primarily indicated during the healing period in treatment with conventional implants for the stabilization of temporary mobile dental prostheses using a minimally invasive transmucosal technique. However, it can also be used for permanent restoration of full or partial dentures with immediate loading in both dense and soft bone. It includes mini round head and square head implants.",
     properties: [
-      "Self-tapping thread",
-      "Grade 5 Titanium",
-      "Color-coded system",
-    ],
-  },
-  {
-    id: 207,
-    category: "6 UNIQUE IMPLANT",
-    brand: "B&B Dental",
-    name: "Unique Implant Vega",
-    price: 515.0,
-    sku: "UNIQ-VEGA",
-    images: [
-      { url: "/images/unique2.png", alt: "Unique Vega Front" },
-      { url: "/images/unique2b.png", alt: "Unique Vega Side" },
-    ],
-    specifications: {
-      diameters: ["Ø 3.5", "Ø 4.0"],
-      lengths: [8, 10, 12],
-      warranty: "24 months",
-      delivery: "Includes surgical guide",
-    },
-    description: "Implant for challenging bone structures.",
-    properties: [
-      "Self-tapping thread",
-      "Grade 5 Titanium",
-      "Color-coded system",
+      " The line of round head mini implants provides immediate and prolonged stability of REMOVABLE PROSTHESES, which in turn ensures the patient also excellent and quick results.",
+
+      " The mini square head implants produce strong primary stability with immediate functionality. They are inserted mainly in the anterior areas to replace lateral, cuspid and bicuspid teeth.",
     ],
   },
 ];
