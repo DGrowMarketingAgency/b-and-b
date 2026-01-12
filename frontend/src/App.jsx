@@ -14,6 +14,7 @@ import { CartProvider } from "./context/CartContext";
 import Checkout from "./pages/CheckOut";
 import CategoryPage from "./pages/CategoryPage";
 import AllProductsPage from "./pages/AllProductPage";
+import Digitalsurgicalguide from "./pages/digitalsurgicalguide";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
           <Route path="/subperiosteal" element={<Subperiosteal />} />
           <Route path="/surgicalkit" element={<Surgicalkit />} />
           <Route path="/conexaconnection" element={<Conexaconnection />} />
+          <Route
+            path="/digitalsurgicalguide"
+            element={<Digitalsurgicalguide />}
+          />
           <Route path="/uniqueimplant" element={<Uniqueimplant />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/:id" element={<ProductDetails />} />

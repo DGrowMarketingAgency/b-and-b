@@ -17,11 +17,12 @@ const HomeCardFour = () => {
             European standards
           </h2>
           <p className="mb-6 text-xl md:text-2xl">
-            Our 30-year history of research and development ensures that B&B
-            Implant meets the highest European standards by being manufactured
-            in the centre of the high-technology district in Italy, Bologna. Now
-            B&B is available in more than 40 countries with worldwide
-            certifications.
+            Our 30 Years <span className="md:text-4xl">+</span> History of
+            Research and Development Ensures that B&B Implant meets the Highest
+            European Standards by being Manufactured in the centre of the
+            High-Technology District in Italy, Bologna. Now B&B is available in
+            more than <br /> 50<span className="md:text-4xl">+</span> countries
+            with Worldwide Certifications.
           </p>
           <button
             className="bg-red-600 w-fit px-12 py-2 text-lg

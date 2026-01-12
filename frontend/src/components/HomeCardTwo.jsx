@@ -18,15 +18,25 @@ const HomeCardTwo = () => {
               SURFACE TREATMENT{" "}
             </span>{" "}
           </h2>
-          <p className="mb-6 text-lg md:text-2xl">
-            Two very delicate etching surface treatments bring B&B Dental
-            Implant benefits: absolute cleanliness and a uniform surface.
+          <p className="mb-2 text-lg md:text-xl">
+            Double Acid Etched - Two very delicate etching surface treatments
+            bring B&B Dental Implant benefits .
+          </p>
+          <p className="mb-2 text-lg md:text-xl">
+            Formation of surface oxide on titanium, as well as cleaning even the
+            internal part of threads. Bio-Active treatment forms by subtraction
+            a micro-controlled surface roughness which helps osteoblasts first
+            to anchor on a cellular level and then to integrate into bone
+            tissue, thus shortening osseointegration times. In addition, all
+            decontamination processes and surface treatments are conducted under
+            cleanroom conditions.
           </p>
 
-          <p className="mb-6 text-lg md:text-xl">
+          {/* <p className="mb-2 text-lg md:text-xl">
             Argon plasma treatment involves bombarding the surface of the
-            implants with the gas argon
-          </p>
+            implants with the gas argon absolute cleanliness and a uniform
+            surface.
+          </p> */}
           <button
             className="bg-red-600 w-fit px-12 py-2 text-lg
             text-white font-semibold rounded hover:bg-red-700 transition uppercase"

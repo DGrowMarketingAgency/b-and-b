@@ -33,6 +33,14 @@ const Navbar = () => {
               <li>
                 <Link to="/subperiosteal">SUBPERIOSTEAL IMPLANT</Link>
               </li>
+              <li>
+                <Link
+                  to="/digitalsurgicalguide"
+                  onClick={() => setIsOpen(false)}
+                >
+                  DIGITAL SURGICAL GUIDE
+                </Link>
+              </li>
             </ul>
           </nav>
 
@@ -77,6 +85,14 @@ const Navbar = () => {
               <li>
                 <Link to="/subperiosteal" onClick={() => setIsOpen(false)}>
                   SUBPERIOSTEAL IMPLANT
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/digitalsurgicalguide"
+                  onClick={() => setIsOpen(false)}
+                >
+                  DIGITAL SURGICAL GUIDE
                 </Link>
               </li>
             </ul>

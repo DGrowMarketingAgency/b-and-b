@@ -54,7 +54,7 @@ const Footer = () => {
               <Link to="/subperiosteal">B&B Dental Implants</Link>
               <Link to="/subperiosteal">B&B Restoration Components</Link>
               <Link to="/subperiosteal">B&B Surgical Kits</Link>
-              <Link to="/subperiosteal">subperiosteal implants</Link>
+              <Link to="/subperiosteal">Subperiosteal implants</Link>
             </div>
           </div>
           <div className="">
