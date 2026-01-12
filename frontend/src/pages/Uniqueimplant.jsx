@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import bgImage from "../assets/implant-baner.webp";
 import uniONE from "../assets/uni-1.webp";
 import uniTwo from "../assets/uni-2.webp";
@@ -15,6 +15,15 @@ import t5 from "../assets/u-t5.webp";
 import t6 from "../assets/u-t6.webp";
 
 const Uniqueimplant = () => {
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <Fragment>
       <div className="w-full h-[400px] relative overflow-hidden flex items-center justify-center ">
@@ -54,7 +63,10 @@ const Uniqueimplant = () => {
         <img src={t5} alt="" />
         <img src={t6} alt="" />
       </div>
-      <section className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 ">
+      <section
+        className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
+        id="1"
+      >
         <div className="flex align-middle justify-center ">
           <img className="w-[80% ] m-auto" src={uniONE} alt="" />
         </div>
@@ -111,7 +123,10 @@ const Uniqueimplant = () => {
           </div>
         </div>
       </section>
-      <section className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 ">
+      <section
+        className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
+        id="2"
+      >
         <div className=" text-black flex flex-col justify-center gap-4  p-4">
           <div className="">
             <p className="text-gray-500 text-xs font-bold">CONEXA CONNECTION</p>
@@ -176,7 +191,10 @@ const Uniqueimplant = () => {
           <img className="w-[80% ] m-auto" src={uniTwo} alt="" />
         </div>
       </section>
-      <section className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 ">
+      <section
+        className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
+        id="3"
+      >
         <div className="flex align-middle justify-center ">
           <img className="w-[80% ] m-auto" src={uniThree} alt="" />
         </div>
@@ -243,7 +261,10 @@ const Uniqueimplant = () => {
           </div>
         </div>
       </section>
-      <section className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 ">
+      <section
+        className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
+        id="4"
+      >
         <div className=" text-black flex flex-col justify-center gap-4  p-4">
           <div className="">
             <p className="text-gray-500 text-xs font-bold">CONEXA CONNECTION</p>
@@ -310,7 +331,10 @@ const Uniqueimplant = () => {
           <img className="w-[80% ] m-auto" src={uniFour} alt="" />
         </div>
       </section>
-      <section className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 ">
+      <section
+        className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
+        id="5"
+      >
         <div className="flex align-middle justify-center ">
           <img className="w-[80% ] m-auto" src={uniFive} alt="" />
         </div>
@@ -364,7 +388,10 @@ const Uniqueimplant = () => {
           </div>
         </div>
       </section>
-      <section className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 ">
+      <section
+        className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
+        id="6"
+      >
         <div className=" text-black flex flex-col justify-center gap-4  p-4">
           <div className="">
             <p className="text-gray-500 text-xs font-bold">REDUCED CONECTION</p>
