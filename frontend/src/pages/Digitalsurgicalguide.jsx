@@ -4,13 +4,11 @@ import bgimg from "../assets/digitalsection.png";
 import img1 from "../assets/d1.webp";
 import img2 from "../assets/d2.webp";
 import img3 from "../assets/d3.webp";
-import img4 from "../assets/dg-2.webp";
-import img5 from "../assets/dg1.webp";
 import img6 from "../assets/ds1.webp";
 import img7 from "../assets/ds2.webp";
 import img8 from "../assets/ds3.webp";
 import img9 from "../assets/ds4.webp";
-import img10 from "../assets/ds5.webp";
+import img10 from "../assets/d5.webp";
 import img11 from "../assets/dg-2.webp";
 import img12 from "../assets/dg1.webp";
 

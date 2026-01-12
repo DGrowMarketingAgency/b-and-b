@@ -11,13 +11,18 @@ const Navbar = () => {
     <Fragment>
       {/* Top Navbar */}
       <header className="w-full h-20 bg-black/90 flex items-center justify-between">
-        <div className="w-[90%] mx-auto flex items-center justify-between">
+        <div className="w-[95%] mx-auto flex items-center justify-between">
           {/* Logo */}
           <img className="w-56" src={logo} alt="Logo" />
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex">
-            <ul className="text-white/90 flex gap-8 font-semibold">
+            <ul className="text-white/90 flex gap-4 font-semibold">
+              <li>
+                <Link to="https://dgrowmarketingagency.github.io/marks-biotech/index.html">
+                  HIGHLIGHTS
+                </Link>
+              </li>
               <li>
                 <Link to="/">HOME</Link>
               </li>
