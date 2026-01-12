@@ -65,7 +65,7 @@ const Uniqueimplant = () => {
       </div>
       <section
         className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
-        id="1"
+        id="design1"
       >
         <div className="flex align-middle justify-center ">
           <img className="w-[80% ] m-auto" src={uniONE} alt="" />
@@ -125,7 +125,7 @@ const Uniqueimplant = () => {
       </section>
       <section
         className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
-        id="2"
+        id="design2"
       >
         <div className=" text-black flex flex-col justify-center gap-4  p-4">
           <div className="">
@@ -193,7 +193,7 @@ const Uniqueimplant = () => {
       </section>
       <section
         className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
-        id="3"
+        id="design3"
       >
         <div className="flex align-middle justify-center ">
           <img className="w-[80% ] m-auto" src={uniThree} alt="" />
@@ -263,7 +263,7 @@ const Uniqueimplant = () => {
       </section>
       <section
         className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
-        id="4"
+        id="design4"
       >
         <div className=" text-black flex flex-col justify-center gap-4  p-4">
           <div className="">
@@ -333,7 +333,7 @@ const Uniqueimplant = () => {
       </section>
       <section
         className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
-        id="5"
+        id="design5"
       >
         <div className="flex align-middle justify-center ">
           <img className="w-[80% ] m-auto" src={uniFive} alt="" />
@@ -390,7 +390,7 @@ const Uniqueimplant = () => {
       </section>
       <section
         className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 "
-        id="6"
+        id="design6"
       >
         <div className=" text-black flex flex-col justify-center gap-4  p-4">
           <div className="">
