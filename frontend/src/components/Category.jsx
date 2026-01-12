@@ -26,7 +26,7 @@ const Category = () => {
             <img src={categoryImage3} alt="" />
           </div>
         </Link>
-        <Link to="/">
+        {/* <Link to="/">
           <div className="">
             <img src={categoryImage4} alt="" />
           </div>
@@ -40,7 +40,7 @@ const Category = () => {
           <div className="">
             <img src={categoryImage6} alt="" />
           </div>
-        </Link>
+        </Link> */}
       </div>
     </Fragment>
   );
