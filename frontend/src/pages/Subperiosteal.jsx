@@ -27,9 +27,9 @@ const Subperiosteal = () => {
             SUBPERIOSTEAL IMPLANT 'IUXTA'
           </h1>
           <p className="text-white text-center w-[80%] md:w-[60%] lg:w-[55%]">
-            Fully digitalised and customised dental implants, IUXTA, are
-            produced via laser melting and based on the patient’s clinical
-            needs.
+            Fully Digitalised and Customised Dental Implants, IUXTA, are
+            Produced via Laser Melting and based on the Patient’s Clinical
+            Needs.
           </p>
         </div>
       </div>
@@ -41,14 +41,14 @@ const Subperiosteal = () => {
           <div className="flex flex-col gap-4">
             <p className="text-gray-500 text-xs font-bold">IUXTA IMPLANTS</p>
             <h2 className="text-red-600 text-2xl font-bold ">
-              subperiosteal implants
+              Subperiosteal Implants
             </h2>
             <p>
-              Unlike classical and more well-known endosseous implants, the
-              Iuxta implants are positioned subperiosteally, they are placed by
-              taking advantage of the morphology of the bone structure and
-              subsequently fixed to the bone with the use of osteosynthesis
-              screws.
+              Unlike Classical and More Well-known Endosseous Implants, the
+              Iuxta Implants are Positioned Subperiosteally, They are Placed by
+              taking Advantage of the Morphology of the Bone Structure and
+              Subsequently Fixed to the Bone with the use of Osteosynthesis
+              Screws.
             </p>
           </div>
         </div>
@@ -57,13 +57,13 @@ const Subperiosteal = () => {
         <div className=" text-black flex flex-col justify-center gap-4  p-4">
           <div className="">
             <p className="text-gray-500 text-xs font-bold">
-              subperiosteal implants
+              Subperiosteal Implants
             </p>
             <h2 className="text-red-600 text-2xl font-bold">
-              Another possibility of implant
+              Another Possibility of Implant
             </h2>
-            <p>
-              This siitable solution is considered by the clinician in order to
+            <p style={{ textTransform: "capitalize" }}>
+              This suitable solution is considered by the clinician in order to
               resolve rehabilitation cases in patients who suffer from severe
               bone atrophy and who consequently cannot be treated with classical
               implant surgery. Moreover, these patients can rarely undergo such

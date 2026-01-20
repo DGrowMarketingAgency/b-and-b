@@ -5,6 +5,7 @@ import conTwo from "../assets/con-2.webp";
 import conThree from "../assets/con-3.webp";
 import conFour from "../assets/con-4.webp";
 import Category from "../components/Category";
+import RacingTechnologySection from "../components/RacingTechnologySection";
 
 const Conexaconnection = () => {
   return (
@@ -159,6 +160,7 @@ const Conexaconnection = () => {
           <img className="w-[80% ] m-auto" src={conTwo} alt="" />
         </div>
       </section>
+      <RacingTechnologySection />
       <section className="w-[80%] m-auto grid grid-cols-1 md:grid-cols-2 ">
         <div className="bg-gray-500 ">
           <img className=" m-auto" src={conThree} alt="" />
