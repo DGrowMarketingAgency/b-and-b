@@ -18,7 +18,7 @@ import novobone from "../assets/imgs/Novobone.jpg";
 
 const Heritage = () => {
   return (
-    <div className="bg-black text-white scroll-smooth">
+    <div className="bg-black text-white scroll-smooth mb-0">
       {/* TOP BANNER */}
       <section
         className="h-[80vh] flex items-end justify-center text-center bg-cover bg-center"
@@ -61,7 +61,7 @@ const Heritage = () => {
 
       {/* TIMELINE */}
       <section
-        className="py-[100px] px-[5%] bg-cover bg-center"
+        className="pt-[100px] px-[5%] bg-cover bg-center mb-0"
         style={{
           backgroundImage:
             "linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4), rgba(10,2,2,0.2)), url('/assets/imgs/bg-heritage-1.jpeg')",
