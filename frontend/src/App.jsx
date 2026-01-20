@@ -15,6 +15,7 @@ import Checkout from "./pages/CheckOut";
 import CategoryPage from "./pages/CategoryPage";
 import AllProductsPage from "./pages/AllProductPage";
 import Digitalsurgicalguide from "./pages/digitalsurgicalguide";
+import Heritage from "./pages/Heritage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/subperiosteal" element={<Subperiosteal />} />
+          <Route path="/heritage" element={<Heritage />} />
           <Route path="/surgicalkit" element={<Surgicalkit />} />
           <Route path="/conexaconnection" element={<Conexaconnection />} />
           <Route

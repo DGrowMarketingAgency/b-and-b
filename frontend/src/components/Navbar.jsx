@@ -27,6 +27,9 @@ const Navbar = () => {
                 <Link to="/">HOME</Link>
               </li>
               <li>
+                <Link to="/heritage">HERITAGE</Link>
+              </li>
+              <li>
                 <Link to="/conexaconnection">CONEXA CONNECTION</Link>
               </li>
               <li>
@@ -71,6 +74,9 @@ const Navbar = () => {
                 <Link to="/" onClick={() => setIsOpen(false)}>
                   HOME
                 </Link>
+              </li>
+              <li>
+                <Link to="/heritage">HERITAGE</Link>
               </li>
               <li>
                 <Link to="/conexaconnection" onClick={() => setIsOpen(false)}>

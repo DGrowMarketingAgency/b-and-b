@@ -27,7 +27,7 @@ const RacingTechnologySection = () => {
         <div>
           {/* LOGOS */}
           <div className="flex justify-center gap-6 mb-4">
-            <img src={ferrari} alt="Ferrari" className="h-16" />
+            <img src={ferrari} alt="ferrari" className="h-16" />
             <img src={lamborghini} alt="Lamborghini" className="h-16" />
             <img src={ducati} alt="Ducati" className="h-16" />
             <img src={maserate} alt="Maserate" className="h-16" />
